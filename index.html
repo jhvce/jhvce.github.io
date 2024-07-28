@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Clock test thingy</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    </head>
+    <body>
+
+        <div class="digital-clock">
+            <div class="time">
+                <span class="hours">00</span>
+                <span class="dots">:</span>
+                <span class="minutes">00</span>
+            </div>
+        </div>
+
+        <script>
+            
+            // time to get current time in js!
+            function clock(){
+                var today = new Date();
+    
+                var hours = today.getHours();
+                var minutes = today.getMinutes();
+                let period = "AM";
+    
+                hours = hours > 12 ? hours % 12 : hours;
+    
+                if(hours < 10){
+                    hours = "0" + hours;
+                }
+                
+                if(minutes < 10){
+                    minutes = "0" + minutes;
+                }
+    
+                document.querySelector(".hours").innerHTML = hours;
+                document.querySelector(".minutes").innerHTML = minutes;
+                document.querySelector(".period").innerHTML = period;
+            }
+    
+    
+            var updateClock = setInterval(clock, 1000);
+    
+        </script>
+
+    </body>
+</html>
