@@ -14,7 +14,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at 70% 50%, rgba(70,70,70,1), rgba(15,15,15,1));
+    background: radial-gradient(rgba(70,70,70,1), rgba(15,15,15,1));
 }
 
 .digital-clock{
