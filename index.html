@@ -24,7 +24,7 @@
     
                 var hours = today.getHours();
                 var minutes = today.getMinutes();
-                let period = "AM";
+                // uncomment for 12hr: let period = "AM";
     
                 // uncomment for 12hr: hours = hours > 12 ? hours % 12 : hours;
     
@@ -38,7 +38,7 @@
     
                 document.querySelector(".hours").innerHTML = hours;
                 document.querySelector(".minutes").innerHTML = minutes;
-                document.querySelector(".period").innerHTML = period;
+                // uncomment for 12hr: document.querySelector(".period").innerHTML = period;
             }
     
     
